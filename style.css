@@ -60,10 +60,19 @@ html, body{
 .mario{
     position: absolute;
     top: -60px;
+    cursor: pointer;
+}
+
+.billboard{
+    position: absolute;
+    height: 200%;
+    bottom: 90px;
+    left: 200px;
+    animation: drive 10s linear reverse;
 }
 
 .mario:hover{
-    animation: drive 10s backwards infinite linear;
+    animation: drive 10s both linear;
 }
 
 @keyframes drive{
@@ -77,9 +86,18 @@ html, body{
 
 @keyframes cloud{
     from{
-        transform: translateX(-300);
+        transform: translateX(0%);
     }
     to{
         transform: translateX(100%);
+    }
+}
+
+@keyframes billboard{
+    from{
+        transform: translateX(100);
+    }
+    to{
+        transform: translateX(0);
     }
 }
