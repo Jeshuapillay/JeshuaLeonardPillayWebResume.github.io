@@ -83,9 +83,9 @@ html, body{
 
 @keyframes clouds{
     from{
-        transform: translateX(-100);
+        transform: translateX(0px);
     }
     to{
-        transform: translateX(0);
+        transform: translateX(1000px);
     }
 }
