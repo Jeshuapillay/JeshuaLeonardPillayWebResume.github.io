@@ -73,7 +73,7 @@ html, body{
     }
 
     70%{
-        top: -120px;
+        top: -122px;
     }
 
     100%{
@@ -86,6 +86,6 @@ html, body{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(1000px);
+        transform: translateX(500px);
     }
 }
