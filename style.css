@@ -5,97 +5,85 @@ html, body{
     margin: 0;
 }
 
-.grass, .sky, .road{
+/* Normal CSS of objects below */
+
+.sky, .road, .underground{
     position: relative;
 }
 
 .sky{
-    background: skyblue;
-    height: 40%;
+    background: aqua;
+    height: 85%;
+    width: 100%;
 }
 
 .cloud:nth-child(1){
-    width: 100px;
     top: 120px;
-    opacity: 0.5;
-    animation: cloud 40s infinite linear reverse;
+    width: 200px;
+    opacity: 0.75;
+    animation: clouds 80s linear infinite reverse;
 }
 
 .cloud:nth-child(2){
-    width: 300px;
-    top: 0px;
-    opacity: 1;
-    animation: cloud 60s infinite linear reverse;
+    top: 80px;
+    width: 500px;
+    animation: clouds 30s linear infinite reverse;
 }
 
 .cloud:nth-child(3){
-    width: 200px;
-    top: 50px;
-    opacity: 0.25;
-    animation: cloud 80s infinite linear reverse;
-}
-
-.grass{
-    background: green;
-    height: 30%;
-}
-
-.road{
-    background: grey;
-    height: 30%;
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 10px solid dimgrey;
-    border-bottom: 10px solid dimgrey;
-    /*animation: drive infinite linear;*/
-}
-
-.line{
-    border: 5px dashed white;
-    width: 100%;
-    top: 45%;
-    position: absolute;
+    top: 200px;
+    width: 900px;
+    opacity: 0.70;
+    animation: clouds 50s linear infinite reverse;
 }
 
 .mario{
     position: absolute;
-    top: -60px;
-    cursor: pointer;
+    bottom: 15px;
+    left: 150px;
+    animation: marioDrop 1s linear;
 }
 
 .billboard{
     position: absolute;
-    height: 200%;
-    bottom: 90px;
-    left: 200px;
-    animation: drive 10s linear reverse;
+    bottom: 16px;
+    left: 400px;
 }
 
-.mario:hover{
-    animation: drive 10s both linear;
+.road{
+    background: grey;
+    height: 3%;
+    width: 100%;
 }
 
-@keyframes drive{
+.underground{
+    background: burlywood;
+    height: 13%;
+    width: 100%;
+}
+
+/* Animation CSS Below */
+
+@keyframes marioDrop{
+    0%{
+        top: -600px;
+    }
+    50%{
+        bottom: 15px;
+    }
+
+    70%{
+        top: -120px;
+    }
+
+    100%{
+        bottom: 15px;
+    }
+}
+
+@keyframes clouds{
     from{
-        transform: translateX(0px); 
-    }
-    to{
-        transform: translateX(1000px);
-    }
-}
-
-@keyframes cloud{
-    from{
-        transform: translateX(0%);
-    }
-    to{
-        transform: translateX(100%);
-    }
-}
-
-@keyframes billboard{
-    from{
-        transform: translateX(100);
+        transform: translateX(-100);
     }
     to{
         transform: translateX(0);
