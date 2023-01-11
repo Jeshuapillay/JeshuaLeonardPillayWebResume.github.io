@@ -66,7 +66,7 @@ html, body{
 
 @keyframes marioDrop{
     0%{
-        top: -600px;
+        top: -1500px;
     }
     50%{
         bottom: 15px;
