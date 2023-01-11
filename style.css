@@ -8,8 +8,7 @@ html, body{
 }
 
 .container{
-    width: 100vw;
-    height: 100vh;
+    background: aqua;
 }
 
 .sky, .road, .underground{
@@ -19,7 +18,15 @@ html, body{
 .sky{
     background: aqua;
     height: 85%;
-    width: 100%;
+    left: 800px;
+    right: 2000px;
+}
+
+.sky:hover{
+    animation-name: movement;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
 }
 
 .cloud:nth-child(1){
@@ -42,17 +49,45 @@ html, body{
     animation: clouds 50s linear infinite reverse;
 }
 
-.mario{
+.car{
     position: absolute;
-    bottom: 15px;
-    left: 150px;
-    animation: marioDrop 1s linear;
+    top: -300px;
+    right: 800px;
+    transform: scale(0.5, 0.5);
+    animation: carDrop 2s linear;
+}
+
+.tree{
+    position: absolute;
+    transform: scale(1, 1);
+    right: 1800px;
+    bottom: -10px;
 }
 
 .billboard{
     position: absolute;
-    bottom: 16px;
-    left: 400px;
+    top: 100px;
+    left: -300px;
+}
+
+.bench{
+    position: absolute;
+    top: 215px;
+    left: 300px;
+    transform: scale(0.25, 0.25);
+}
+
+.building{
+    position: absolute;
+    top: 100px;
+    left: 1000px;
+    transform: scale(2, 2);
+}
+
+.forest{
+    position: absolute;
+    top: 100px;
+    left: 2000px;
 }
 
 .road{
@@ -69,7 +104,7 @@ html, body{
 
 /* Animation CSS Below */
 
-@keyframes marioDrop{
+@keyframes carDrop{
     0%{
         top: -1500px;
     }
@@ -78,7 +113,7 @@ html, body{
     }
 
     70%{
-        top: -122px;
+        top: -250px;
     }
 
     100%{
@@ -91,6 +126,15 @@ html, body{
         transform: translateX(0px);
     }
     to{
-        transform: translateX(500px);
+        transform: translateX(1000px);
+    }
+}
+
+@keyframes movement{
+    from{
+        transform: translateX(200px);
+    }
+    to{
+        transform: translateX(-3000px);
     }
 }
